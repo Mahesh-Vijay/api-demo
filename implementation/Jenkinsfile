@@ -8,12 +8,19 @@ pipeline
 						sh 'mvn clean'
 						}
 					}
-		stage ('compile stage'){
+		stage ('testing stage'){
 					steps{
 						withMaven(maven : 'Maven-3.8.5')
-						sh 'mvn compile'
+						sh 'mvn test'
 						}
 					}
+		stage ('compile stage'){
+                                        steps{
+                                                withMaven(maven : 'Maven-3.8.5')
+                                                sh 'mvn compile'
+                                                }
+                                        }
+
 		stage ('package satge'){
 					steps{
 						withMaven(maven : 'Maven-3.8.5')
