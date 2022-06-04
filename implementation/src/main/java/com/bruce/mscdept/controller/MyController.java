@@ -12,6 +12,6 @@ public class MyController {
 
     @GetMapping(path = "/hello")
     public ResponseEntity<String> sayHello(){
-        return ResponseEntity.ok().body("Hello, Maheshwari");
+        return ResponseEntity.ok().body("Hello Kgisl, This is Mahesh Simple Task");
     }
 }
